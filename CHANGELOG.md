@@ -2,7 +2,12 @@ TBD
 ===
 Unreleased changes. Release notes have not yet been written.
 
-* update depends: anyhow(1.0.39) and many
+0.1.1 (2021-04-25)
+=====
+
+* update depends: regex(1.4.6)
+* update depends: anyhow(1.0.40): Reduce memory footprint of errors on Rust versions 1.51+
+* update depends: many
 
 0.1.0 (2021-01-30)
 =====
