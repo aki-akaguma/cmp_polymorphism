@@ -49,7 +49,9 @@ impl Frog {
 }
 
 impl Animal for Cat {
-    fn animal_id(&self) -> i32 { 1 }
+    fn animal_id(&self) -> i32 {
+        1
+    }
     fn talk(&self) -> &'static str {
         "Meow!"
     }
@@ -64,7 +66,9 @@ impl Animal for Cat {
     }
 }
 impl Animal for Dog {
-    fn animal_id(&self) -> i32 { 2 }
+    fn animal_id(&self) -> i32 {
+        2
+    }
     fn talk(&self) -> &'static str {
         "Woof!"
     }
@@ -79,7 +83,9 @@ impl Animal for Dog {
     }
 }
 impl Animal for Duck {
-    fn animal_id(&self) -> i32 { 3 }
+    fn animal_id(&self) -> i32 {
+        3
+    }
     fn talk(&self) -> &'static str {
         "Quack!"
     }
@@ -94,7 +100,9 @@ impl Animal for Duck {
     }
 }
 impl Animal for Crow {
-    fn animal_id(&self) -> i32 { 4 }
+    fn animal_id(&self) -> i32 {
+        4
+    }
     fn talk(&self) -> &'static str {
         "Caw!"
     }
@@ -109,7 +117,9 @@ impl Animal for Crow {
     }
 }
 impl Animal for Frog {
-    fn animal_id(&self) -> i32 { 5 }
+    fn animal_id(&self) -> i32 {
+        5
+    }
     fn talk(&self) -> &'static str {
         "Croak!"
     }

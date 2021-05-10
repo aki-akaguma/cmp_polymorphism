@@ -2,9 +2,11 @@ TASKSET = taskset -c 2
 
 all:
 
-bench:
-	@rm -f z.bench.log
+bench-build:
 	cargo bench --no-run
+
+bench: bench-build
+	@rm -f z.bench.log
 	$(TASKSET) cargo bench --bench=bench-trait-obj -- -n | tee -a z.bench.log
 	$(TASKSET) cargo bench --bench=bench-enum-obj -- -n | tee -a z.bench.log
 

@@ -37,9 +37,7 @@ fn print_help_and_exit(program: &str) {
     println!(
         "[usage] {} {{ {} }}",
         program,
-        concat!(
-            "shape_benchmark_results",
-        )
+        concat!("shape_benchmark_results",)
     );
     std::process::exit(0);
 }

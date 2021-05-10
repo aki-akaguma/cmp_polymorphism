@@ -1,4 +1,4 @@
-fn main () {
+fn main() {
     let vec = cmp_polymorphism::create_trait_objs(1000000);
     let r1 = {
         let mut r = 0;

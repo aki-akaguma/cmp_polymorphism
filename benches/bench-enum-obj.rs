@@ -1,7 +1,15 @@
 use criterion::{criterion_group, criterion_main, Criterion};
 use criterion_cycles_per_byte::CyclesPerByte;
 
-fn process_one(count: i32) -> anyhow::Result<((&'static str, i32), (&'static str, i32), (&'static str, i32), (&'static str, i32), (&'static str, i32))> {
+fn process_one(
+    count: i32,
+) -> anyhow::Result<(
+    (&'static str, i32),
+    (&'static str, i32),
+    (&'static str, i32),
+    (&'static str, i32),
+    (&'static str, i32),
+)> {
     cmp_polymorphism::do_enum_obj(count)
 }
 
@@ -15,9 +23,9 @@ fn criterion_benchmark(c: &mut Criterion<CyclesPerByte>) {
             assert_eq!(ut, "Quack!");
             assert_eq!(un, 10 + 10 + 1 + 10 + 2);
             assert_eq!(rt, "Caw!");
-            assert_eq!(rn, 10 + 10 + 1 + 10 + 2 + 10 +3);
+            assert_eq!(rn, 10 + 10 + 1 + 10 + 2 + 10 + 3);
             assert_eq!(gt, "Croak!");
-            assert_eq!(gn, 10 + 10 + 1 + 10 + 2 + 10 +3 + 10 +4);
+            assert_eq!(gn, 10 + 10 + 1 + 10 + 2 + 10 + 3 + 10 + 4);
         }
         Err(err) => {
             eprintln!("{}", err);
@@ -91,6 +99,8 @@ fn criterion_benchmark(c: &mut Criterion<CyclesPerByte>) {
 
 criterion_group!(
     name = benches;
-    config = Criterion::default().with_measurement(CyclesPerByte);
+    config = Criterion::default().with_measurement(CyclesPerByte)
+        .warm_up_time(std::time::Duration::from_millis(300))
+        .measurement_time(std::time::Duration::from_millis(1500));
     targets = criterion_benchmark);
 criterion_main!(benches);
