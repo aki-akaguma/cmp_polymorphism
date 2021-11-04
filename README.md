@@ -1,3 +1,27 @@
+rustc 1.56.1 (59eed8a2a 2021-11-01)
+|         `name`         |   `bench`   |  `per 1k`   |
+|:-----------------------|------------:|------------:|
+| enum_obj^              |    0.025 kc |    0.000 kc |
+| enum_obj^vec^id^01k    |    4.576 kc |    4.576 kc |
+| enum_obj^vec^id^08k    |   36.355 kc |    4.544 kc |
+| enum_obj^vec^id^90k    | 1270.354 kc |   14.115 kc |
+| enum_obj^vec^rem^01k   |   12.587 kc |   12.587 kc |
+| enum_obj^vec^rem^08k   |   99.855 kc |   12.482 kc |
+| enum_obj^vec^rem^90k   | 1914.675 kc |   21.274 kc |
+| enum_obj^vec^sum^01k   |    7.910 kc |    7.910 kc |
+| enum_obj^vec^sum^08k   |   87.262 kc |   10.908 kc |
+| enum_obj^vec^sum^90k   | 1597.248 kc |   17.747 kc |
+| trait_obj^             |    0.025 kc |    0.000 kc |
+| trait_obj^vec^id^01k   |    6.858 kc |    6.858 kc |
+| trait_obj^vec^id^08k   |   49.307 kc |    6.163 kc |
+| trait_obj^vec^id^90k   |  627.355 kc |    6.971 kc |
+| trait_obj^vec^rem^01k  |   10.774 kc |   10.774 kc |
+| trait_obj^vec^rem^08k  |   84.752 kc |   10.594 kc |
+| trait_obj^vec^rem^90k  | 2287.182 kc |   25.413 kc |
+| trait_obj^vec^sum^01k  |    8.720 kc |    8.720 kc |
+| trait_obj^vec^sum^08k  |   71.800 kc |    8.975 kc |
+| trait_obj^vec^sum^90k  | 2374.904 kc |   26.388 kc |
+
 rustc 1.53.0 (53cb7b09b 2021-06-17)
 |         `name`         |   `bench`   |  `per 1k`   |
 |:-----------------------|------------:|------------:|
