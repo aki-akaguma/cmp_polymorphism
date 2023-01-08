@@ -13,6 +13,10 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 * reformat `CHANGELOG.md`
 
 
+## [0.1.4] (2021-11-04)
+### Changed
+* update depends
+
 ## [0.1.3] (2021-06-30)
 ### Added
 * memx-cdy(0.1) into `dev-dependencies`
