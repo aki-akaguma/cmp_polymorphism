@@ -1,3 +1,12 @@
+# cmp_polymorphism
+
+![Rust Version][rustc-image]
+![Apache2/MIT licensed][license-image]
+
+research: compare polymorphism
+
+## Benchmark Results
+
 rustc 1.56.1 (59eed8a2a 2021-11-01)
 |         `name`         |   `bench`   |  `per 1k`   |
 |:-----------------------|------------:|------------:|
@@ -69,3 +78,9 @@ rustc 1.52.0 (88f19c6da 2021-05-03)
 | trait_obj^vec^sum^01k  |    8.413 kc |    8.413 kc |
 | trait_obj^vec^sum^08k  |   66.099 kc |    8.262 kc |
 | trait_obj^vec^sum^90k  | 1182.313 kc |   13.137 kc |
+
+
+[//]: # (badges)
+
+[rustc-image]: https://img.shields.io/badge/rustc-1.56+-blue.svg
+[license-image]: https://img.shields.io/badge/license-Apache2.0/MIT-blue.svg
